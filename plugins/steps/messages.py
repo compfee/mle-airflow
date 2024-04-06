@@ -1,8 +1,6 @@
 
 from airflow.providers.telegram.hooks.telegram import TelegramHook # импортируем хук телеграма
 
-TELEGRAM_TOKEN = '7079419560:AAGTWpptUJV8NTyJgCNJtaE1hA_pLOxZJ4w'
-TELEGRAM_CHAT_ID = '-4138425030'
 
 def send_telegram_success_message(context): # на вход принимаем словарь со контекстными переменными
     hook = TelegramHook(telegram_conn_id='test',
