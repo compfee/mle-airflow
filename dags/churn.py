@@ -14,9 +14,7 @@ def prepare_churn_dataset():
     import numpy as np
     from airflow.providers.postgres.hooks.postgres import PostgresHook
     import sqlalchemy
-    from sqlalchemy import inspect
-    from sqlalchemy import MetaData, Table, Column, String, Integer, DateTime, Float, UniqueConstraint
-    
+
     @task()
     def create_table():
         from sqlalchemy import inspect
